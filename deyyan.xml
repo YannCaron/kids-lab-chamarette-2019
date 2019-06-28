@@ -1,0 +1,261 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="Actor" id="1CJ/zp(a?jGyVJBYC(kK">juliette</variable>
+    <variable type="Actor" id=",`w`5_9LULGSNA;N^zlF">tr</variable>
+    <variable type="Actor" id="+}fw_aqNcXG~Xb`#49?2">alien</variable>
+  </variables>
+  <block type="game_create" id="(RoZfi9HcV0-,WjL;Z)=" x="-50" y="50">
+    <field name="IMG">space</field>
+    <field name="WIDTH">800</field>
+    <field name="HEIGHT">600</field>
+    <next>
+      <block type="actor_create" id="H_yLS,Ke,_}@M$O2GKwt">
+        <field name="ACTOR" id="1CJ/zp(a?jGyVJBYC(kK" variabletype="Actor">juliette</field>
+        <value name="IMG">
+          <shadow type="images_planetcute" id="gCM;74p+SW%=VA[qgy6_">
+            <field name="VALUE">rocketship</field>
+          </shadow>
+          <block type="images_spaceart" id="0^AkYZyzi6w`{bdK/ru,">
+            <field name="VALUE">enemyBlue1</field>
+          </block>
+        </value>
+        <value name="X">
+          <shadow type="math_number" id=".Z=K~Ro=,}T,wK|ZT$M{">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+        <value name="Y">
+          <shadow type="math_number" id="A/IH{IH|r4=E#ES):B;I">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="event_create" id="p9S5si-Iq,6j0jum~e|S">
+            <value name="EVENT">
+              <block type="event_scene_key" id="+86jjMs8lNy*I*E!)y~:">
+                <field name="EVENT">ON</field>
+                <field name="KEY">38</field>
+              </block>
+            </value>
+            <statement name="STMT">
+              <block type="actor_set" id="W*f_HS0cO13:X@bBH^dl">
+                <field name="ACTOR" id="1CJ/zp(a?jGyVJBYC(kK" variabletype="Actor">juliette</field>
+                <field name="PROPERTY">posY</field>
+                <value name="VALUE">
+                  <shadow type="math_number" id="#%;SK(1uOHdX`xQK3oU}">
+                    <field name="NUM">100</field>
+                  </shadow>
+                  <block type="math_arithmetic" id="wUKav-qR00TOnZ-J?R@8">
+                    <field name="OP">MINUS</field>
+                    <value name="A">
+                      <shadow type="math_number" id="yie@~~Z,BS|b--^+}!Tv">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="actor_get" id="V{.{IgU|[aJ=A($XSmDE">
+                        <field name="ACTOR" id="1CJ/zp(a?jGyVJBYC(kK" variabletype="Actor">juliette</field>
+                        <field name="PROPERTY">posY</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="j?w+PNefl{UT,+!G+iNh">
+                        <field name="NUM">100</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="event_create" id="V]_95B,o:dnz~%oOH,-Z">
+                <value name="EVENT">
+                  <block type="event_scene_key" id="Yfs2r0z$;}Jk@%A3,iUN">
+                    <field name="EVENT">ON</field>
+                    <field name="KEY">40</field>
+                  </block>
+                </value>
+                <statement name="STMT">
+                  <block type="actor_set" id="-o6OAznSYK8V{^tC|#i[">
+                    <field name="ACTOR" id="1CJ/zp(a?jGyVJBYC(kK" variabletype="Actor">juliette</field>
+                    <field name="PROPERTY">posY</field>
+                    <value name="VALUE">
+                      <shadow type="math_number" id="#%;SK(1uOHdX`xQK3oU}">
+                        <field name="NUM">100</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="!gI8qT1+92][~fT.nn_=">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <shadow type="math_number" id="yie@~~Z,BS|b--^+}!Tv">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="actor_get" id="zu,4X5`)u:Y{+(!Y%rC*">
+                            <field name="ACTOR" id="1CJ/zp(a?jGyVJBYC(kK" variabletype="Actor">juliette</field>
+                            <field name="PROPERTY">posY</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="x@Hdh;~b5-,A/O}tvqXr">
+                            <field name="NUM">100</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="event_create" id="X.y|SX^!an/-RIzv_V#u">
+                    <value name="EVENT">
+                      <block type="event_scene_key" id="0aPPwv:Wi0|sd2VAs7[+">
+                        <field name="EVENT">ON</field>
+                        <field name="KEY">37</field>
+                      </block>
+                    </value>
+                    <statement name="STMT">
+                      <block type="actor_set" id=",8[2|5CVE,ofmxpdzXN*">
+                        <field name="ACTOR" id="1CJ/zp(a?jGyVJBYC(kK" variabletype="Actor">juliette</field>
+                        <field name="PROPERTY">posX</field>
+                        <value name="VALUE">
+                          <shadow type="math_number" id="q^y?(g4D6Our%6y+j$./">
+                            <field name="NUM">100</field>
+                          </shadow>
+                          <block type="math_arithmetic" id="5Jv@2HvN+M}R3!_(p@b0">
+                            <field name="OP">MINUS</field>
+                            <value name="A">
+                              <shadow type="math_number" id="2ZZRFbRUkR-R)8p%r80~">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="actor_get" id="po7pB_^9^VK?6)ZwKAlH">
+                                <field name="ACTOR" id="1CJ/zp(a?jGyVJBYC(kK" variabletype="Actor">juliette</field>
+                                <field name="PROPERTY">posX</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="YLL*tS]C}{F~rwfBl!jr">
+                                <field name="NUM">100</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="event_create" id="j.LM~2])t._+4Ikl.Q{Z">
+                        <value name="EVENT">
+                          <block type="event_scene_key" id="8{%_4A+;T;9uihVv^N-}">
+                            <field name="EVENT">ON</field>
+                            <field name="KEY">39</field>
+                          </block>
+                        </value>
+                        <statement name="STMT">
+                          <block type="actor_set" id="{!4b-II@/?_9w*rU6LGF">
+                            <field name="ACTOR" id="1CJ/zp(a?jGyVJBYC(kK" variabletype="Actor">juliette</field>
+                            <field name="PROPERTY">posX</field>
+                            <value name="VALUE">
+                              <shadow type="math_number" id="+sc?4ijN/^2qoKM,xMEW">
+                                <field name="NUM">100</field>
+                              </shadow>
+                              <block type="math_arithmetic" id="JY`-.oAbJIvwwLYsj^J}">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="=}}JwTVtR_~C;X%92:0W">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="actor_get" id="n4gyEumq#CqD#8Q^V@L[">
+                                    <field name="ACTOR" id="1CJ/zp(a?jGyVJBYC(kK" variabletype="Actor">juliette</field>
+                                    <field name="PROPERTY">posX</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="JooVEK~OY.=RqKHG?QM*">
+                                    <field name="NUM">100</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="event_create" id="nB|^aXp]#.3GJp%F{1=v">
+                            <value name="EVENT">
+                              <block type="event_scene_touch" id="Y*}}`K:}m:$R?tei97=-">
+                                <field name="EVENT">ON</field>
+                              </block>
+                            </value>
+                            <statement name="STMT">
+                              <block type="actor_create" id="wAIsCh$48^Z^]tJEBv1`">
+                                <field name="ACTOR" id=",`w`5_9LULGSNA;N^zlF" variabletype="Actor">tr</field>
+                                <value name="IMG">
+                                  <shadow type="images_planetcute" id="c6NF3I_`ie99X%5#.w0Y">
+                                    <field name="VALUE">Beetleship</field>
+                                  </shadow>
+                                  <block type="images_spaceart" id="#N,|wU3btb3`za^Pp!7~">
+                                    <field name="VALUE">laserRed</field>
+                                  </block>
+                                </value>
+                                <value name="X">
+                                  <shadow type="math_number" id="PikJ}[d4]O=KpMXZo/|a">
+                                    <field name="NUM">100</field>
+                                  </shadow>
+                                  <block type="actor_get" id="=Mp8ENq9Aaz9j.X{Ca9W">
+                                    <field name="ACTOR" id="1CJ/zp(a?jGyVJBYC(kK" variabletype="Actor">juliette</field>
+                                    <field name="PROPERTY">posX</field>
+                                  </block>
+                                </value>
+                                <value name="Y">
+                                  <shadow type="math_number" id="Yx`67AKQzX@Bcp!M}KM?">
+                                    <field name="NUM">100</field>
+                                  </shadow>
+                                  <block type="actor_get" id="BG;+ne$]z8ras;!r2,Ke">
+                                    <field name="ACTOR" id="1CJ/zp(a?jGyVJBYC(kK" variabletype="Actor">juliette</field>
+                                    <field name="PROPERTY">posY</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="actor_method_1" id="JQBOt4skEN:!!`baEL=J">
+                                    <field name="ACTOR" id=",`w`5_9LULGSNA;N^zlF" variabletype="Actor">tr</field>
+                                    <field name="METHOD">pushX</field>
+                                    <value name="VALUE">
+                                      <shadow type="math_number" id="5z40g3;zCrJ:5QFp7S{A">
+                                        <field name="NUM">50</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="actor_create" id="K^%gtol%}Aj6a#Ub@z*!">
+                                <field name="ACTOR" id="+}fw_aqNcXG~Xb`#49?2" variabletype="Actor">alien</field>
+                                <value name="IMG">
+                                  <shadow type="images_planetcute" id="8B`:r7/7+0%`zhk]U6IL">
+                                    <field name="VALUE">Beetleship</field>
+                                  </shadow>
+                                  <block type="images_platformer" id=",!JU2MJg6#Jjc(jcSdlP">
+                                    <field name="VALUE">alienFront</field>
+                                  </block>
+                                </value>
+                                <value name="X">
+                                  <shadow type="math_number" id="4WIUCdX4jvqx/.Z|s%lX">
+                                    <field name="NUM">100</field>
+                                  </shadow>
+                                </value>
+                                <value name="Y">
+                                  <shadow type="math_number" id="UnzCn%YlU-B:,PI8x1l*">
+                                    <field name="NUM">100</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,669 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="W://GfalLV$RZk=$$l6]">score</variable>
+    <variable type="Actor" id="]_6M!%,^0d=o,DK2bknb">boite</variable>
+    <variable type="Actor" id="ZZFs$unM}IV}AZ0AI5a@">juju</variable>
+    <variable type="" id="?v76Sm`n=2TC,{JHq;Qk">positionx</variable>
+    <variable type="Actor" id="vn/iWkxsj8:|^Vj-H^V]">plateform</variable>
+    <variable type="Actor" id="?Jhc8JNS^1~KVYXal+:T">etoile</variable>
+    <variable type="Actor" id=";1`489*THZ(Lb;*K`{gr">etoil2</variable>
+    <variable type="Actor" id="YHjS3(xrb(m0B5%j^MSG">etoil3</variable>
+    <variable type="Actor" id="4i+|wk}zxAu.cCpYy=*u">etoil4</variable>
+    <variable type="Actor" id="K}oJV9LR,k$U:[NI(A-X">etoil5</variable>
+    <variable type="Actor" id="{dkSq!ToZo)bJ1,0WE}[">etoil6</variable>
+    <variable type="Actor" id="y_e/`/.c=^`Uz*9Yu1Ps">etoil7</variable>
+  </variables>
+  <block type="game_create" id="QtGD],H1OFJ]F=6a=)uO" x="-50" y="-150">
+    <field name="IMG">grass_2</field>
+    <field name="WIDTH">1200</field>
+    <field name="HEIGHT">600</field>
+    <next>
+      <block type="variables_set" id="vjOCBQwxI5sp(4JpY0i[" inline="true">
+        <field name="VAR" id="W://GfalLV$RZk=$$l6]" variabletype="">score</field>
+        <value name="VALUE">
+          <shadow type="logic_null" id="JdQHrc^B%t8gOu!CAmrk"></shadow>
+          <block type="math_number" id="tGjc9AyFKT0{MNbrRIS-" inline="true">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_add_text" id="9_OFQ1-Ct60wH3-gWzaA">
+            <field name="PROPERTY">TOP_LEFT</field>
+            <value name="TEXT">
+              <shadow type="text" id=".X}z^ZND=ib[?:U*y6PD">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="variables_get" id="cG{/Gwa71jy0uDFk{hki">
+                <field name="VAR" id="W://GfalLV$RZk=$$l6]" variabletype="">score</field>
+              </block>
+            </value>
+            <next>
+              <block type="actor_create" id="9X!]g~?2`3m^ij%l?[vn">
+                <field name="ACTOR" id="]_6M!%,^0d=o,DK2bknb" variabletype="Actor">boite</field>
+                <value name="IMG">
+                  <shadow type="images_planetcute" id="sc,g7~*1[MAN._vJ!USB">
+                    <field name="VALUE">Chest Open</field>
+                  </shadow>
+                </value>
+                <value name="X">
+                  <shadow type="math_number" id="@xXZsQ{g=@h[r}_6=w_V">
+                    <field name="NUM">100</field>
+                  </shadow>
+                </value>
+                <value name="Y">
+                  <shadow type="math_number" id="cIuCDIhMG.zk_LfsFX?l">
+                    <field name="NUM">100</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="actor_method_1" id="S9.!3#8:ut_K]o9BR4:S">
+                    <field name="ACTOR" id="]_6M!%,^0d=o,DK2bknb" variabletype="Actor">boite</field>
+                    <field name="METHOD">pushX</field>
+                    <value name="VALUE">
+                      <shadow type="math_number" id="E+nu/8mj!Np)dbzn0(Ad">
+                        <field name="NUM">10</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="event_create" id="LE{E.D-@2udC=Uh:@K{~">
+                        <value name="EVENT">
+                          <block type="event_actor_collide_bounds" id="D#vU44X]I.c~`33J=y~1">
+                            <field name="ACTOR" id="]_6M!%,^0d=o,DK2bknb" variabletype="Actor">boite</field>
+                            <field name="EVENT">ON</field>
+                            <field name="SIGNAL">COLLIDE_BOUNDS</field>
+                          </block>
+                        </value>
+                        <statement name="STMT">
+                          <block type="controls_if" id="p(sU1|IRuGSVoM,X3@-|" inline="true">
+                            <mutation else="1"></mutation>
+                            <value name="IF0">
+                              <shadow type="logic_boolean" id="/u%GYUuXn0{?DXGIRTd_">
+                                <field name="BOOL">true</field>
+                              </shadow>
+                              <block type="logic_compare" id="e$TTWi3nC4?N2l~*NzKs">
+                                <field name="OP">GTE</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="*X4-r0@Ztpnpk3*RK)MQ">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                  <block type="actor_get" id="tROBxJ8SnO2SNwx=,}M_">
+                                    <field name="ACTOR" id="]_6M!%,^0d=o,DK2bknb" variabletype="Actor">boite</field>
+                                    <field name="PROPERTY">posX</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="{mjALGk~n#:Bogk(JNbB">
+                                    <field name="NUM">400</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="actor_method_1" id=",z*qq!q9m(sy}ZdCtee!">
+                                <field name="ACTOR" id="]_6M!%,^0d=o,DK2bknb" variabletype="Actor">boite</field>
+                                <field name="METHOD">pushX</field>
+                                <value name="VALUE">
+                                  <shadow type="math_number" id="79BO~_w%);epo3u`E*,h">
+                                    <field name="NUM">-10</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                            <statement name="ELSE">
+                              <block type="actor_method_1" id="il;EgI^;,F.Dv5uzLOS0">
+                                <field name="ACTOR" id="]_6M!%,^0d=o,DK2bknb" variabletype="Actor">boite</field>
+                                <field name="METHOD">pushX</field>
+                                <value name="VALUE">
+                                  <shadow type="math_number" id="sZ2SjNbupQmHdsL/6#Qj">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="actor_create" id="`xubhY9RldWT3NlS8{KO">
+                            <field name="ACTOR" id="ZZFs$unM}IV}AZ0AI5a@" variabletype="Actor">juju</field>
+                            <value name="IMG">
+                              <shadow type="images_planetcute" id="e#c}bu!=ssK{@vEwshC!">
+                                <field name="VALUE">Character Boy</field>
+                              </shadow>
+                            </value>
+                            <value name="X">
+                              <shadow type="math_number" id="6QJZ%Ig8Z`Ya|aD-.A_s">
+                                <field name="NUM">100</field>
+                              </shadow>
+                            </value>
+                            <value name="Y">
+                              <shadow type="math_number" id=":u!8FldR3):k:91X6%iw">
+                                <field name="NUM">100</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="actor_method_0" id="m;oM0liNJBoN5:pNSPk+">
+                                <field name="ACTOR" id="ZZFs$unM}IV}AZ0AI5a@" variabletype="Actor">juju</field>
+                                <field name="METHOD">setFixedRotation</field>
+                                <next>
+                                  <block type="game_follow" id="di#o:X~l_UDi,Pr@)TzN">
+                                    <field name="ACTOR" id="ZZFs$unM}IV}AZ0AI5a@" variabletype="Actor">juju</field>
+                                    <next>
+                                      <block type="event_create" id="k9aK7o3R-Ud2-:,O(2Z,">
+                                        <value name="EVENT">
+                                          <block type="event_scene_key" id="[wV$ax).@tU3g=DWjqnb">
+                                            <field name="EVENT">ON</field>
+                                            <field name="KEY">38</field>
+                                          </block>
+                                        </value>
+                                        <statement name="STMT">
+                                          <block type="actor_method_1" id="B^K{dY;f%MMd?xj)lIjb">
+                                            <field name="ACTOR" id="ZZFs$unM}IV}AZ0AI5a@" variabletype="Actor">juju</field>
+                                            <field name="METHOD">jump</field>
+                                            <value name="VALUE">
+                                              <shadow type="math_number" id="]DB^b;!^}),s%Boi7PRn">
+                                                <field name="NUM">10</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="event_create" id=":VZ-j|@Hwnb{r1X/JKDB">
+                                            <value name="EVENT">
+                                              <block type="event_scene_key" id=")JRpDplZ;`$h.[zxCqK%">
+                                                <field name="EVENT">ON</field>
+                                                <field name="KEY">39</field>
+                                              </block>
+                                            </value>
+                                            <statement name="STMT">
+                                              <block type="actor_set" id="RX@`DqqmM9;6qyeQPc#a">
+                                                <field name="ACTOR" id="ZZFs$unM}IV}AZ0AI5a@" variabletype="Actor">juju</field>
+                                                <field name="PROPERTY">posX</field>
+                                                <value name="VALUE">
+                                                  <shadow type="math_number" id="BL!=wY-[!xc`op4rmL6N">
+                                                    <field name="NUM">100</field>
+                                                  </shadow>
+                                                  <block type="math_arithmetic" id="i^yn6=?O7_!#6A#]PKB3">
+                                                    <field name="OP">ADD</field>
+                                                    <value name="A">
+                                                      <shadow type="math_number" id="#|FFV*L7XPze?8|CG5S]">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="actor_get" id="`V|pR8f-W0a^jpQNo?mx">
+                                                        <field name="ACTOR" id="ZZFs$unM}IV}AZ0AI5a@" variabletype="Actor">juju</field>
+                                                        <field name="PROPERTY">posX</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <shadow type="math_number" id="Dx1PfVS)04b[5.WC.jZh">
+                                                        <field name="NUM">50</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="event_create" id="Y1z:[b3nBIr?IZ(b0nvz">
+                                                <value name="EVENT">
+                                                  <block type="event_scene_key" id="*l(o:u_VW}}(K}@aC8Y6">
+                                                    <field name="EVENT">ON</field>
+                                                    <field name="KEY">37</field>
+                                                  </block>
+                                                </value>
+                                                <statement name="STMT">
+                                                  <block type="actor_set" id="t`?i:#1zn36gC/0D)vv.">
+                                                    <field name="ACTOR" id="ZZFs$unM}IV}AZ0AI5a@" variabletype="Actor">juju</field>
+                                                    <field name="PROPERTY">posX</field>
+                                                    <value name="VALUE">
+                                                      <shadow type="math_number" id="mA#dtZO90V9$yWP`CT}N">
+                                                        <field name="NUM">100</field>
+                                                      </shadow>
+                                                      <block type="math_arithmetic" id="U@Yv[N,i8V.(`l_*YW)R">
+                                                        <field name="OP">MINUS</field>
+                                                        <value name="A">
+                                                          <shadow type="math_number" id="Z`GpRRqdHR?K,r8HD6JY">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                          <block type="actor_get" id="H=?![^RhTu?l.:AGPteY">
+                                                            <field name="ACTOR" id="ZZFs$unM}IV}AZ0AI5a@" variabletype="Actor">juju</field>
+                                                            <field name="PROPERTY">posX</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <shadow type="math_number" id="0(N.Sw}nH{*!`s4(Davq">
+                                                            <field name="NUM">50</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </statement>
+                                                <next>
+                                                  <block type="event_create" id="h6At1pio,[(4.lb!79W*">
+                                                    <value name="EVENT">
+                                                      <block type="event_actor_collide" id="Olmi9Eu^ENWL*}%SoNid">
+                                                        <field name="ACTOR" id="ZZFs$unM}IV}AZ0AI5a@" variabletype="Actor">juju</field>
+                                                        <field name="EVENT">ON</field>
+                                                        <value name="IMG">
+                                                          <shadow type="images_planetcute" id="Jj?%zSl.QtodcQ(eY0Tc">
+                                                            <field name="VALUE">Chest Open</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <statement name="STMT">
+                                                      <block type="variables_set" id="bM0Z0T3qC@yEHMCB2l*k" inline="true">
+                                                        <field name="VAR" id="W://GfalLV$RZk=$$l6]" variabletype="">score</field>
+                                                        <value name="VALUE">
+                                                          <shadow type="logic_null" id="]j:f*#m?^YnfsZ=nVd?}"></shadow>
+                                                          <block type="math_arithmetic" id="~h1e`t85[lSbt%x93Y(j">
+                                                            <field name="OP">ADD</field>
+                                                            <value name="A">
+                                                              <shadow type="math_number" id=",?b@`q0Is]VXSYy9^OS#">
+                                                                <field name="NUM">1</field>
+                                                              </shadow>
+                                                              <block type="variables_get" id="ubg-M}1JPKSkQBw+LK;[">
+                                                                <field name="VAR" id="W://GfalLV$RZk=$$l6]" variabletype="">score</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <shadow type="math_number" id="ISR;x0Yv4vyiN|[d,/DR">
+                                                                <field name="NUM">1</field>
+                                                              </shadow>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="variables_set" id="RfX[Xm_S^?Dee^49IjIN" inline="true">
+                                                        <field name="VAR" id="?v76Sm`n=2TC,{JHq;Qk" variabletype="">positionx</field>
+                                                        <value name="VALUE">
+                                                          <shadow type="logic_null" id="jCb$/Q;P}vIf!~!2HPm6"></shadow>
+                                                          <block type="math_number" id="1c-N8nlk)MNLysXgj)zQ" inline="true">
+                                                            <field name="NUM">50</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="controls_repeat_ext" id="lol*G%)}MmfQ@lcezo,N" inline="true">
+                                                            <value name="TIMES">
+                                                              <shadow type="math_number" id="]dc4a/$-w-F!j,fW2K@E">
+                                                                <field name="NUM">10</field>
+                                                              </shadow>
+                                                            </value>
+                                                            <statement name="DO">
+                                                              <block type="actor_create" id="WSdyDh#)}NGMf:E`6M$/">
+                                                                <field name="ACTOR" id="vn/iWkxsj8:|^Vj-H^V]" variabletype="Actor">plateform</field>
+                                                                <value name="IMG">
+                                                                  <shadow type="images_planetcute" id="1G`ns4#b;d6YyBdh+)WT">
+                                                                    <field name="VALUE">Water Block</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <value name="X">
+                                                                  <shadow type="math_number" id="agCwnB9]|-W$cFJEWFx%">
+                                                                    <field name="NUM">50</field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="WPR;2B?d$W:Oec}egL3P">
+                                                                    <field name="VAR" id="?v76Sm`n=2TC,{JHq;Qk" variabletype="">positionx</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="Y">
+                                                                  <shadow type="math_number" id="$-Q!Y}S7#VC%+C!|HzEG">
+                                                                    <field name="NUM">100</field>
+                                                                  </shadow>
+                                                                  <block type="math_random_int" id="Onk2.72j~H!HYAX^Zwil">
+                                                                    <value name="FROM">
+                                                                      <shadow type="math_number" id="Fooq_G*9!auY9ay3M,hZ">
+                                                                        <field name="NUM">50</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <value name="TO">
+                                                                      <shadow type="math_number" id="*~)P,`|My#+}Uar,f^EC">
+                                                                        <field name="NUM">550</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="variables_set" id="-*c%QzM9Nwny|g9GNApp" inline="true">
+                                                                    <field name="VAR" id="?v76Sm`n=2TC,{JHq;Qk" variabletype="">positionx</field>
+                                                                    <value name="VALUE">
+                                                                      <shadow type="logic_null" id="]j:f*#m?^YnfsZ=nVd?}"></shadow>
+                                                                      <block type="math_arithmetic" id="2p7K?bK:@(k7Hj{V^DjX">
+                                                                        <field name="OP">ADD</field>
+                                                                        <value name="A">
+                                                                          <shadow type="math_number" id=",?b@`q0Is]VXSYy9^OS#">
+                                                                            <field name="NUM">1</field>
+                                                                          </shadow>
+                                                                          <block type="variables_get" id="_O6~Qi~*a0#hqD4-CMYb">
+                                                                            <field name="VAR" id="?v76Sm`n=2TC,{JHq;Qk" variabletype="">positionx</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="B">
+                                                                          <shadow type="math_number" id="J#6wE6828%~%~TgTw~M+">
+                                                                            <field name="NUM">100</field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </statement>
+                                                            <next>
+                                                              <block type="actor_create" id="WlS`*MLE=^=o1j()XKqV">
+                                                                <field name="ACTOR" id="?Jhc8JNS^1~KVYXal+:T" variabletype="Actor">etoile</field>
+                                                                <value name="IMG">
+                                                                  <shadow type="images_planetcute" id="ZXsqzMFGweMr;T{%B;O7">
+                                                                    <field name="VALUE">Star</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <value name="X">
+                                                                  <shadow type="math_number" id="1)n+QHYh+el$]q*g6fK:">
+                                                                    <field name="NUM">100</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <value name="Y">
+                                                                  <shadow type="math_number" id="`(BRT@$*OUA~YXdhwiqa">
+                                                                    <field name="NUM">125</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="event_create" id="bFnx%$M:1?wHd-WYv%_B">
+                                                                    <value name="EVENT">
+                                                                      <block type="event_actor_collide" id="1yh-d.-S[G278eyVv^4f">
+                                                                        <field name="ACTOR" id="?Jhc8JNS^1~KVYXal+:T" variabletype="Actor">etoile</field>
+                                                                        <field name="EVENT">ON</field>
+                                                                        <value name="IMG">
+                                                                          <shadow type="images_planetcute" id="oL-*=$aZ/6G,#~22QIz!">
+                                                                            <field name="VALUE">Character Boy</field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <statement name="STMT">
+                                                                      <block type="actor_method_0" id="b^98]MsL`J~gL~F_thW6">
+                                                                        <field name="ACTOR" id="?Jhc8JNS^1~KVYXal+:T" variabletype="Actor">etoile</field>
+                                                                        <field name="METHOD">destroy</field>
+                                                                      </block>
+                                                                    </statement>
+                                                                    <next>
+                                                                      <block type="actor_create" id="xPn:nV[,Njsl4.S8OewN">
+                                                                        <field name="ACTOR" id=";1`489*THZ(Lb;*K`{gr" variabletype="Actor">etoil2</field>
+                                                                        <value name="IMG">
+                                                                          <shadow type="images_planetcute" id="mREwy49@oQ;h$]*oKN0:">
+                                                                            <field name="VALUE">Star</field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                        <value name="X">
+                                                                          <shadow type="math_number" id="@9(;7u2,%H(7}PPsNtEc">
+                                                                            <field name="NUM">400</field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                        <value name="Y">
+                                                                          <shadow type="math_number" id="KT0),tA)92y:Rvp9fR^r">
+                                                                            <field name="NUM">115</field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="event_create" id="LWQ2Jp6!C8yJ,_o9gN7R">
+                                                                            <value name="EVENT">
+                                                                              <block type="event_actor_collide" id="WRlB+1U;sRMHB@]uyJGw">
+                                                                                <field name="ACTOR" id=";1`489*THZ(Lb;*K`{gr" variabletype="Actor">etoil2</field>
+                                                                                <field name="EVENT">ON</field>
+                                                                                <value name="IMG">
+                                                                                  <shadow type="images_planetcute" id="`,:{DC{?ZEMJoW)!iU}r">
+                                                                                    <field name="VALUE">Character Boy</field>
+                                                                                  </shadow>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                            <statement name="STMT">
+                                                                              <block type="actor_method_0" id="`STvQb;g^N^r~4X`#m9x">
+                                                                                <field name="ACTOR" id=";1`489*THZ(Lb;*K`{gr" variabletype="Actor">etoil2</field>
+                                                                                <field name="METHOD">destroy</field>
+                                                                              </block>
+                                                                            </statement>
+                                                                            <next>
+                                                                              <block type="actor_create" id="Ni)Wd4Z(zb$/8VounZWA">
+                                                                                <field name="ACTOR" id="YHjS3(xrb(m0B5%j^MSG" variabletype="Actor">etoil3</field>
+                                                                                <value name="IMG">
+                                                                                  <shadow type="images_planetcute" id="]as)NEDz/sRjUb_o5CL#">
+                                                                                    <field name="VALUE">Star</field>
+                                                                                  </shadow>
+                                                                                </value>
+                                                                                <value name="X">
+                                                                                  <shadow type="math_number" id="U=~hyt?}bCbH{eJztZe@">
+                                                                                    <field name="NUM">700</field>
+                                                                                  </shadow>
+                                                                                </value>
+                                                                                <value name="Y">
+                                                                                  <shadow type="math_number" id="]{C)`C5Fq={OT}foSgBR">
+                                                                                    <field name="NUM">105</field>
+                                                                                  </shadow>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="event_create" id="z==HmqdH(ObXO;yBLe7{">
+                                                                                    <value name="EVENT">
+                                                                                      <block type="event_actor_collide" id="7Z=KrVO1$e*bl33^SHw@">
+                                                                                        <field name="ACTOR" id="YHjS3(xrb(m0B5%j^MSG" variabletype="Actor">etoil3</field>
+                                                                                        <field name="EVENT">ON</field>
+                                                                                        <value name="IMG">
+                                                                                          <shadow type="images_planetcute" id="{=Bo!j!RtV/u@5v)`:HX">
+                                                                                            <field name="VALUE">Character Boy</field>
+                                                                                          </shadow>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <statement name="STMT">
+                                                                                      <block type="actor_method_0" id="T{aH/!uU9N!QlI*F$sr*">
+                                                                                        <field name="ACTOR" id="YHjS3(xrb(m0B5%j^MSG" variabletype="Actor">etoil3</field>
+                                                                                        <field name="METHOD">destroy</field>
+                                                                                      </block>
+                                                                                    </statement>
+                                                                                    <next>
+                                                                                      <block type="actor_create" id="}@aNoew=PYYKwBY31_;D">
+                                                                                        <field name="ACTOR" id="4i+|wk}zxAu.cCpYy=*u" variabletype="Actor">etoil4</field>
+                                                                                        <value name="IMG">
+                                                                                          <shadow type="images_planetcute" id="kMmNBy2c;:EuZ37v$FdF">
+                                                                                            <field name="VALUE">Star</field>
+                                                                                          </shadow>
+                                                                                        </value>
+                                                                                        <value name="X">
+                                                                                          <shadow type="math_number" id="(@XNcY`mg8Ka={N]Cd^n">
+                                                                                            <field name="NUM">100</field>
+                                                                                          </shadow>
+                                                                                        </value>
+                                                                                        <value name="Y">
+                                                                                          <shadow type="math_number" id="qj(Cpo+3UMk*H5uBSnUb">
+                                                                                            <field name="NUM">100</field>
+                                                                                          </shadow>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="event_create" id="JmN9[rg~tka(@qL;]axn">
+                                                                                            <value name="EVENT">
+                                                                                              <block type="event_actor_collide" id="LGFy;Epk3X5Tk}EV@01d">
+                                                                                                <field name="ACTOR" id="4i+|wk}zxAu.cCpYy=*u" variabletype="Actor">etoil4</field>
+                                                                                                <field name="EVENT">ON</field>
+                                                                                                <value name="IMG">
+                                                                                                  <shadow type="images_planetcute" id="bD,),A_c3TQKxl?E2)Ww">
+                                                                                                    <field name="VALUE">Character Boy</field>
+                                                                                                  </shadow>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <statement name="STMT">
+                                                                                              <block type="actor_method_0" id="kK_0taJOATA$$DC3g1Js">
+                                                                                                <field name="ACTOR" id="4i+|wk}zxAu.cCpYy=*u" variabletype="Actor">etoil4</field>
+                                                                                                <field name="METHOD">destroy</field>
+                                                                                              </block>
+                                                                                            </statement>
+                                                                                            <next>
+                                                                                              <block type="actor_create" id="=.VK~-4gBiL{2Och(;x|">
+                                                                                                <field name="ACTOR" id="K}oJV9LR,k$U:[NI(A-X" variabletype="Actor">etoil5</field>
+                                                                                                <value name="IMG">
+                                                                                                  <shadow type="images_planetcute" id="}S.QQS,pnXmo@9ONw%y{">
+                                                                                                    <field name="VALUE">Star</field>
+                                                                                                  </shadow>
+                                                                                                </value>
+                                                                                                <value name="X">
+                                                                                                  <shadow type="math_number" id="B+.mDtF!mHDqp59paSJR">
+                                                                                                    <field name="NUM">100</field>
+                                                                                                  </shadow>
+                                                                                                </value>
+                                                                                                <value name="Y">
+                                                                                                  <shadow type="math_number" id="BvUg-90wr%2}S0Zy|U05">
+                                                                                                    <field name="NUM">100</field>
+                                                                                                  </shadow>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="event_create" id="n#oV|RO.mON4_hZ4!;*r">
+                                                                                                    <value name="EVENT">
+                                                                                                      <block type="event_actor_collide" id="sj_k73G`gx|$P-i%X5A{">
+                                                                                                        <field name="ACTOR" id="K}oJV9LR,k$U:[NI(A-X" variabletype="Actor">etoil5</field>
+                                                                                                        <field name="EVENT">ON</field>
+                                                                                                        <value name="IMG">
+                                                                                                          <shadow type="images_planetcute" id="s40+jpt3YA)m,Q#)Y^Qi">
+                                                                                                            <field name="VALUE">Character Boy</field>
+                                                                                                          </shadow>
+                                                                                                        </value>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <statement name="STMT">
+                                                                                                      <block type="actor_method_0" id="OcR.*vOzAd`@_4@ju?fW">
+                                                                                                        <field name="ACTOR" id="K}oJV9LR,k$U:[NI(A-X" variabletype="Actor">etoil5</field>
+                                                                                                        <field name="METHOD">destroy</field>
+                                                                                                      </block>
+                                                                                                    </statement>
+                                                                                                    <next>
+                                                                                                      <block type="actor_create" id="y2Ew]14_m+y-@Z}!4g+w">
+                                                                                                        <field name="ACTOR" id="{dkSq!ToZo)bJ1,0WE}[" variabletype="Actor">etoil6</field>
+                                                                                                        <value name="IMG">
+                                                                                                          <shadow type="images_planetcute" id="Bxq2?~j6p}+3`p$xRgq1">
+                                                                                                            <field name="VALUE">Star</field>
+                                                                                                          </shadow>
+                                                                                                        </value>
+                                                                                                        <value name="X">
+                                                                                                          <shadow type="math_number" id="Yynrenoeu*zT-JzX/29!">
+                                                                                                            <field name="NUM">100</field>
+                                                                                                          </shadow>
+                                                                                                        </value>
+                                                                                                        <value name="Y">
+                                                                                                          <shadow type="math_number" id="j;vol!q96F!_=AUrKyfj">
+                                                                                                            <field name="NUM">100</field>
+                                                                                                          </shadow>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="event_create" id="0tJXQR-N4h:tzoxw9}WG">
+                                                                                                            <value name="EVENT">
+                                                                                                              <block type="event_actor_collide" id="U,wE}?UYv}e]U$j/9n|o">
+                                                                                                                <field name="ACTOR" id="{dkSq!ToZo)bJ1,0WE}[" variabletype="Actor">etoil6</field>
+                                                                                                                <field name="EVENT">ON</field>
+                                                                                                                <value name="IMG">
+                                                                                                                  <shadow type="images_planetcute" id="O_8@%TVOC^kjo8.hkHrW">
+                                                                                                                    <field name="VALUE">Character Boy</field>
+                                                                                                                  </shadow>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <statement name="STMT">
+                                                                                                              <block type="actor_method_0" id="H=pgs[0GgccGfvu,W5Li">
+                                                                                                                <field name="ACTOR" id="{dkSq!ToZo)bJ1,0WE}[" variabletype="Actor">etoil6</field>
+                                                                                                                <field name="METHOD">destroy</field>
+                                                                                                              </block>
+                                                                                                            </statement>
+                                                                                                            <next>
+                                                                                                              <block type="actor_create" id=".);8BD,%75-8a+aOIrf/">
+                                                                                                                <field name="ACTOR" id="y_e/`/.c=^`Uz*9Yu1Ps" variabletype="Actor">etoil7</field>
+                                                                                                                <value name="IMG">
+                                                                                                                  <shadow type="images_planetcute" id="-s?D:vSjw8jT}_Tr4l7F">
+                                                                                                                    <field name="VALUE">Star</field>
+                                                                                                                  </shadow>
+                                                                                                                </value>
+                                                                                                                <value name="X">
+                                                                                                                  <shadow type="math_number" id="8oCg}tv3%duG{-OnJo4`">
+                                                                                                                    <field name="NUM">100</field>
+                                                                                                                  </shadow>
+                                                                                                                </value>
+                                                                                                                <value name="Y">
+                                                                                                                  <shadow type="math_number" id="9X3pG:WEm-/PE0)p6|{W">
+                                                                                                                    <field name="NUM">100</field>
+                                                                                                                  </shadow>
+                                                                                                                </value>
+                                                                                                                <next>
+                                                                                                                  <block type="event_create" id="iEwh*rRu/_?6DsK{C(M?">
+                                                                                                                    <value name="EVENT">
+                                                                                                                      <block type="event_actor_collide" id="vhA*p2W671LF)7H)?yKl">
+                                                                                                                        <field name="ACTOR" id="y_e/`/.c=^`Uz*9Yu1Ps" variabletype="Actor">etoil7</field>
+                                                                                                                        <field name="EVENT">ON</field>
+                                                                                                                        <value name="IMG">
+                                                                                                                          <shadow type="images_planetcute" id="iR48xD5YkR*pByl{FS^*">
+                                                                                                                            <field name="VALUE">Character Boy</field>
+                                                                                                                          </shadow>
+                                                                                                                        </value>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                    <statement name="STMT">
+                                                                                                                      <block type="actor_method_0" id="I[DC~!J3Vx`v!4k;x_eg">
+                                                                                                                        <field name="ACTOR" id="y_e/`/.c=^`Uz*9Yu1Ps" variabletype="Actor">etoil7</field>
+                                                                                                                        <field name="METHOD">destroy</field>
+                                                                                                                      </block>
+                                                                                                                    </statement>
+                                                                                                                  </block>
+                                                                                                                </next>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

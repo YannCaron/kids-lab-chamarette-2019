@@ -1,0 +1,227 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="Actor" id="f=2u*D}[-8nmfYH{Thmi">cronos</variable>
+    <variable type="Actor" id="Cm4a):6p%GYAF|D+psg1">diamant</variable>
+  </variables>
+  <block type="sequence_wait" id="%/1qB5XytalyZ/%8#Uoc" x="-250" y="-450">
+    <value name="TIME">
+      <shadow type="math_number" id="0TnPWV^3~X|h8IhmA:2M">
+        <field name="NUM">1</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="controls_repeat_ext" id="Cgn9)M6u:BX1pAG]d=;f" inline="true">
+        <value name="TIMES">
+          <shadow type="math_number" id="oTX+a)L[T^64AII$;WDR">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+        <statement name="DO">
+          <block type="game_create" id="wLttAQ$a%VEN|A3IM.n7">
+            <field name="IMG">ice</field>
+            <field name="WIDTH">1000</field>
+            <field name="HEIGHT">600</field>
+            <next>
+              <block type="actor_create" id="5lB)8O}+)kRb^D/aBS;?">
+                <field name="ACTOR" id="f=2u*D}[-8nmfYH{Thmi" variabletype="Actor">cronos</field>
+                <value name="IMG">
+                  <shadow type="images_planetcute" id="HH)3rTeB,UvDwPr=;||S">
+                    <field name="VALUE">Brown Block</field>
+                  </shadow>
+                </value>
+                <value name="X">
+                  <shadow type="math_number" id="?tV3MUbvGla`X;khq?tS">
+                    <field name="NUM">100</field>
+                  </shadow>
+                </value>
+                <value name="Y">
+                  <shadow type="math_number" id="+sCEj](h$8H{{p.(ac?d">
+                    <field name="NUM">550</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="actor_create" id="gw/!`780`KxNvV+`u-T=">
+                    <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                    <value name="IMG">
+                      <shadow type="images_planetcute" id="N([r^Onf!/k~d/GG7V4s">
+                        <field name="VALUE">Beetleship</field>
+                      </shadow>
+                    </value>
+                    <value name="X">
+                      <shadow type="math_number" id="C1M(-cRUfRC]uD_k4+|Y">
+                        <field name="NUM">100</field>
+                      </shadow>
+                    </value>
+                    <value name="Y">
+                      <shadow type="math_number" id="/wT.?wVXw58.CX/6986Y">
+                        <field name="NUM">100</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="event_create" id="u5IQo:Q)M5MJ^~;Is:Q9">
+                        <value name="EVENT">
+                          <block type="event_scene_key" id="|,YN`Fxq`A@3F/fP;(dY">
+                            <field name="EVENT">ON</field>
+                            <field name="KEY">38</field>
+                          </block>
+                        </value>
+                        <statement name="STMT">
+                          <block type="actor_method_0" id="p-F#2_(4{F3cSB=cDVD`">
+                            <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                            <field name="METHOD">flipOnX</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="actor_set" id="X7Wh~b#.{}kGcU)n5Nqs">
+                            <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                            <field name="PROPERTY">posX</field>
+                            <value name="VALUE">
+                              <shadow type="math_number">
+                                <field name="NUM">100</field>
+                              </shadow>
+                              <block type="math_arithmetic" id="CZ%.aX5|QcrEx9hqkhX=">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <shadow type="math_number">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="actor_get" id="#7v}_NxKl*!8.?t]:JQ$">
+                                    <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                                    <field name="PROPERTY">posX</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="lt[d{D||%6%k(!AVKY]W">
+                                    <field name="NUM">100</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="event_create" id="N/6[7+nSR2H}SWVc)1bx">
+                                <value name="EVENT">
+                                  <block type="event_actor_touch" id="=GwLkyzn;AZ}~w$m;Yt2">
+                                    <field name="EVENT">ON</field>
+                                    <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                                  </block>
+                                </value>
+                                <statement name="STMT">
+                                  <block type="actor_set" id="p{}$[f-m/*5L5}MLg%uY">
+                                    <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                                    <field name="PROPERTY">posX</field>
+                                    <value name="VALUE">
+                                      <shadow type="math_number">
+                                        <field name="NUM">100</field>
+                                      </shadow>
+                                      <block type="math_arithmetic" id="qa4_1$Tl-CTUWFh:.+-5">
+                                        <field name="OP">ADD</field>
+                                        <value name="A">
+                                          <shadow type="math_number">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                          <block type="actor_get" id="l!(A/:^+%9}^ROSfwFtt">
+                                            <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                                            <field name="PROPERTY">posX</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <shadow type="math_number" id="PNENWm)aBtWx#YQ0-Sb)">
+                                            <field name="NUM">100</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="event_create" id="{lIyw|tjSil0];hOvKNd">
+                                    <value name="EVENT">
+                                      <block type="event_actor_touch" id="}fy|w$!1$oQe5[6M_9=k">
+                                        <field name="EVENT">ON</field>
+                                        <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                                      </block>
+                                    </value>
+                                    <statement name="STMT">
+                                      <block type="actor_set" id="hVoW3GyPC_nE(kT1Zo4k">
+                                        <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                                        <field name="PROPERTY">posY</field>
+                                        <value name="VALUE">
+                                          <shadow type="math_number">
+                                            <field name="NUM">100</field>
+                                          </shadow>
+                                          <block type="math_arithmetic" id=";.EwvpQ`vV}M^q0[Y`_K">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <shadow type="math_number">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="actor_get" id="qWi$acGs)03#5J=aEQs{">
+                                                <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                                                <field name="PROPERTY">posY</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="m(AqZfKXXQFS/PmmWKNg">
+                                                <field name="NUM">100</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="event_create" id="c}/#V%.%3$p=N{dWuP_2">
+                                        <value name="EVENT">
+                                          <block type="event_actor_touch" id="0.Z)A_-F_N#proI^*eo;">
+                                            <field name="EVENT">ON</field>
+                                            <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                                          </block>
+                                        </value>
+                                        <statement name="STMT">
+                                          <block type="actor_set" id="{hAIO]3R@gYw)9?:(wPH">
+                                            <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                                            <field name="PROPERTY">posY</field>
+                                            <value name="VALUE">
+                                              <shadow type="math_number">
+                                                <field name="NUM">100</field>
+                                              </shadow>
+                                              <block type="math_arithmetic" id="K1+i6*6:%I(NcLH)~9dq">
+                                                <field name="OP">ADD</field>
+                                                <value name="A">
+                                                  <shadow type="math_number">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                  <block type="actor_get" id="4}]Alf{ucBJ)+v_)__L#">
+                                                    <field name="ACTOR" id="Cm4a):6p%GYAF|D+psg1" variabletype="Actor">diamant</field>
+                                                    <field name="PROPERTY">posY</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <shadow type="math_number" id="B6ZpZfA~keKc7E9Me+LT">
+                                                    <field name="NUM">100</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
