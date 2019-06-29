@@ -1,15 +1,23 @@
 # kids-lab-chamarette-2019
 Voici les jeux vidéos créés par les enfants lors de l'atelier *kids-lab.io* à la chamarette en 2019.
 
-Vous trouverez le logiciel à l'adresse : www.kids-lab.io
+Tu trouvera le logiciel à l'adresse : www.kids-lab.io
 
-Pour lancer le jeu, il te suffit de le télécharger (click droit / enregistrer sous)
+Et voici vos travaux :
+*[alicia](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2alicia.xml) 
+*[arnaud](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2arnaud.xml) 
+*[assya hamaili](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2assya%20hamaili.xml) 
+*[candide](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2candide.xml) 
+*[cara ferey](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2cara%20ferey.xml) 
+*[chloé](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2chlo%C3%A9.xml) 
+*[deyyan](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2deyyan.xml) 
+*[jeremy belguidoum](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2jeremy%20belguidoum.xml) 
+*[jied](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2jied.xml) 
+*[kevin](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2kevin.xml) 
+*[lena](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2lena.xml) 
+*[léonard](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2l%C3%A9onard.xml) 
 
-Puis de l'ouvrir à l'aide du bouton "ouvrir" (premier bouton dans le menu du haut) un fois dans le logiciel
 
-
-Si tu n'y parvient pas, demande à une grande personne de t'aider.
-
-Bonne chance :-)
+Bonne continuation :-)
 
 M. Caron
