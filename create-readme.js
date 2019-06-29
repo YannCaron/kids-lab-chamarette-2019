@@ -5,7 +5,7 @@ const files = fs.readdirSync('./').filter(el => /\.xml$/.test(el));
 
 const sb = new Array();
 for (const file of files) {
-	const link = `[${file.replace('.xml', '')}](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2${encodeURI(file)})`;
+	const link = `[${file.replace('.xml', '')}](http://www.kids-lab.io?src=kids-lab-chamarette-2019%2Fmaster%2F${encodeURI(file)})`;
 	console.log(link);
 	sb.push(`\*${link} \n`);
 }
