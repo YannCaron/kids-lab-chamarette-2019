@@ -19,12 +19,12 @@ Et voici vos travaux :
 
 
 Tu peu aussi essayer les demos :
-[cute drop](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=cute_drop)
-[cute jet](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=cute_jet)
-[asteroid](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=asteroid)
-[space craft](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=space_craft)
-[brick out](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=brick_out)
-[alien runner](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=alien_runner)
+* [cute drop](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=cute_drop)
+* [cute jet](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=cute_jet)
+* [asteroid](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=asteroid)
+* [space craft](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=space_craft)
+* [brick out](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=brick_out)
+* [alien runner](http://www.kids-lab.io/?lang=fr&level=0&debug=false&demo=alien_runner)
 
 Bonne continuation :-)
 
